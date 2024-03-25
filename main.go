@@ -31,7 +31,7 @@ func (u User_count) String() string {
 		fmt.Println(err)
 		return ""
 	}
-	return fmt.Sprintf(string(b))
+	return fmt.Sprint(string(b))
 }
 
 func (u User) String() string {
@@ -40,7 +40,7 @@ func (u User) String() string {
 		fmt.Println(err)
 		return ""
 	}
-	return fmt.Sprintf(string(b))
+	return fmt.Sprint(string(b))
 }
 
 func (u User) Save() (*User, error) {

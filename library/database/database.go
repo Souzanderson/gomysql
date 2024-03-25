@@ -4,7 +4,6 @@ import (
 	"database/sql"
 	"encoding/json"
 	"fmt"
-	env "gomysql/environment"
 	"strings"
 	"time"
 
@@ -14,7 +13,7 @@ import (
 var db *sql.DB
 
 func connect() (bool, error) {
-	dblocal, err := sql.Open("mysql", env.GetEnvKey("DB_CONF"))
+	dblocal, err := sql.Open("mysql", GetEnvKey("DB_CONF"))
 	fmt.Println("[INFO] Connect with MySQL server...")
 	if err != nil {
 		return false, err
